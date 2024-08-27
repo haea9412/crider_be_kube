@@ -1,0 +1,17 @@
+# kustomize: 쿠버네티스 리소스 구성하는데 사용
+# 리소스를 정의하는 기본 파일을 오버레이와 같이 수정하여 재사용
+
+
+
+# ecr 주소, 태그 그대로 가져오기
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+images:
+- name: /
+  newName: /
+- name: 336481557929.dkr.ecr.ap-northeast-2.amazonaws.com/cicd-front     # 수정
+  newName: 336481557929.dkr.ecr.ap-northeast-2.amazonaws.com/cicd-front  # 수정
+  newTag: d20c4d0164be060353055db6947f2be406e99855                       # 수정
+resources:
+- ../../resources
+

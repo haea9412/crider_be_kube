@@ -1,0 +1,26 @@
+# image 주소 변경하기
+
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: backend-deployment
+  namespace: backend-deployment-namespace
+  labels:
+    app: bdk #backend deployment korea
+spec:
+  revisionHistoryLimit: 2
+  replicas: 3
+  selector:
+    matchLabels:
+      app: bdk
+  template:
+    metadata:
+      labels:
+        app: bdk
+    spec:
+      containers:
+      - name: backend-con
+        image: 336481557929.dkr.ecr.ap-northeast-2.amazonaws.com/cicd-front:d0c01892d384200ba648957ca579331499ff8a0a #backend container images
+        ports:
+        - containerPort: 80
