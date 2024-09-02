@@ -3,4 +3,7 @@ kind: Kustomization
 resources:
 - crider-deployment.yml
 - crider-service.yml
-
+images:
+- name: aws-ecr-development-crider-service
+  newName: 795149720653.dkr.ecr.ap-northeast-2.amazonaws.com/aws-ecr-development-crider-service
+  newTag: latest
