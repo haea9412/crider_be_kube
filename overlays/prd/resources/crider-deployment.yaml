@@ -18,3 +18,10 @@ spec:
         image: 381492185710.dkr.ecr.ap-northeast-2.amazonaws.com/crider-backend:latest
         ports:
         - containerPort: 80
+        resources:
+          requests:
+            memory: "512Mi"
+            cpu: "500m"
+          limits:
+            memory: "1Gi"
+            cpu: "1000m"      
