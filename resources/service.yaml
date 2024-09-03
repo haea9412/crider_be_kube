@@ -1,13 +1,10 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: crider-service
-  namespace: crider-service-namespace
+  name: api-server
 spec:
-  type: LoadBalancer
-  selector:
-    app: bl
   ports:
-    - protocol: TCP
-      port: 80
-      targetPort: 80
+    - name: svc-port
+      port: 8080
+      targetPort: 8080
+  type: ClusterIP
