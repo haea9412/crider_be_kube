@@ -4,5 +4,7 @@ resources:
 - resources/crider-deployment.yaml
 - resources/crider-service.yaml
 - resources/crider-ingress.yaml
-
-
+images:
+- name: crider-backend
+  newName: 381492185710.dkr.ecr.ap-northeast-2.amazonaws.com/crider-backend
+  newTag: latest
