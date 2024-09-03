@@ -4,7 +4,7 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: crider-service
+  name: nginx
 spec:
   selector:
     app: nginx #디플로이, 서비스 패키지의 식별값 (유지보수 용)
