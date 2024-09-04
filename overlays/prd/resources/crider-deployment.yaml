@@ -3,20 +3,25 @@ kind: Deployment
 metadata:
   name: crider-deployment
   namespace: default
-  labels:
-    app: crider
 spec:
-  replicas: 2
+  replicas: 3
   selector:
     matchLabels:
-      app: crider
+      app: crider-backend
   template:
     metadata:
       labels:
-        app: crider
+        app: crider-backend
     spec:
       containers:
-        - name: crider-backend
-          image: 381492185710.dkr.ecr.ap-northeast-2.amazonaws.com/crider-backend:latest
-          ports:
-            - containerPort: 80
+      - name: crider-backend
+        image: 381492185710.dkr.ecr.ap-northeast-2.amazonaws.com/crider-backend:latest
+        ports:
+        - containerPort: 80
+        resources:
+          requests:
+            memory: "512Mi"
+            cpu: "500m"
+          limits:
+            memory: "1Gi"
+            cpu: "1000m"    
