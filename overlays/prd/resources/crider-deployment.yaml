@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: crider-deployment
-  namespace: crider-back
+  namespace: default
   labels:
     app: crider
 spec:
