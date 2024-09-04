@@ -5,7 +5,7 @@ resources:
 - resources/crider-deployment.yaml
 - resources/crider-service.yaml
 - resources/crider-ingress.yaml
-  #- resources/crider-ingress-nginx.yaml
+- resources/crider-ingress-nginx.yaml
 images:
 - name: aws-ecr-development-crider-service
   newName: 381492185710.dkr.ecr.ap-northeast-2.amazonaws.com/aws-ecr-development-crider-service
