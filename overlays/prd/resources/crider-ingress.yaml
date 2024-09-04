@@ -7,13 +7,13 @@ metadata:
     nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
   rules:
-   host: a784a2ebbaa744fb4b0eba0e57f58ab5-1174947370.ap-northeast-2.elb.amazonaws.com
-    http:
-      paths:
-      - path: /
-        pathType: Prefix
-        backend:
-          service:
-            name: crider-backend
-            port:
-              number: 80
+    - host: a784a2ebbaa744fb4b0eba0e57f58ab5-1174947370.ap-northeast-2.elb.amazonaws.com
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: crider-backend
+                port:
+                  number: 80
