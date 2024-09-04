@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: crider-backend
-        image: 381492185710.dkr.ecr.ap-northeast-2.amazonaws.com/crider-backend:latest
+        image: 381492185710.dkr.ecr.ap-northeast-2.amazonaws.com/aws-ecr-development-crider-service:latest
         ports:
         - containerPort: 80
         resources:
