@@ -4,7 +4,7 @@ kind: Kustomization
 resources:
 - resources/crider-deployment.yaml
 - resources/crider-service.yaml
-- resources/crider-ingress.yaml
+# - resources/crider-ingress.yaml
 # - resources/crider-ingress-nginx.yaml
 # - resources/account.yaml
 images:
