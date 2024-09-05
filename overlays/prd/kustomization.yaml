@@ -11,4 +11,3 @@ images:
 - name: aws-ecr-development-crider-service
   newName: 381492185710.dkr.ecr.ap-northeast-2.amazonaws.com/aws-ecr-development-crider-service
   newTag: latest
-
