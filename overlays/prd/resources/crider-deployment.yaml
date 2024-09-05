@@ -8,8 +8,8 @@ spec:
     app: crider-backend
   ports:
   - protocol: TCP
-    port: 80
-    targetPort: 8080
+    port: 8000
+    targetPort: 8000
   type: NodePort
 
 ---
@@ -32,4 +32,4 @@ spec:
       - name: crider-backend
         image: 381492185710.dkr.ecr.ap-northeast-2.amazonaws.com/aws-ecr-development-crider-service:latest
         ports:
-        - containerPort: 8080
+        - containerPort: 8000
