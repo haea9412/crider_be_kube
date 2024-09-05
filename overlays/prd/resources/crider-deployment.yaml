@@ -4,7 +4,7 @@ metadata:
   name: crider-deployment
   namespace: default
 spec:
-  replicas: 3
+  replicas: 2
   selector:
     matchLabels:
       app: crider-backend
@@ -18,10 +18,10 @@ spec:
         image: 381492185710.dkr.ecr.ap-northeast-2.amazonaws.com/aws-ecr-development-crider-service:latest
         ports:
         - containerPort: 8080
-        resources:
-          requests:
-            memory: "512Mi"
-            cpu: "500m"
-          limits:
-            memory: "1Gi"
-            cpu: "1000m"    
+        # resources:
+        #   requests:
+        #     memory: "512Mi"
+        #     cpu: "500m"
+        #   limits:
+        #     memory: "1Gi"
+        #     cpu: "1000m"    
